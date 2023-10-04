@@ -1,0 +1,95 @@
+.wrap {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: var(--laptop-width);
+  padding: 10px 10px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1600px) {
+  .container {
+    max-width: var(--desktop-width);
+  }
+}
+
+.toolsList {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.toolItem {
+  width: 40px;
+  height: 40px;
+}
+
+.toolBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border: 0;
+  background-color: var(--tool-bg-clr);
+  border-radius: var(--main-border-radius);
+
+  transition: background-color 150ms;
+
+  cursor: pointer;
+}
+
+.toolBtn:hover {
+  background-color: var(--tool-active-bg-clr);
+}
+
+.toolBtn.active {
+  background-color: var(--tool-active-bg-clr);
+}
+
+.controlsList {
+  display: flex;
+  align-items: center;
+}
+
+.controlsItem {
+  width: 25px;
+  height: 25px;
+}
+
+.controlsItem:nth-child(2) {
+  margin-left: 20px;
+
+  transform: rotate(180deg);
+}
+
+.controlsItem:nth-child(3) {
+  margin-left: 65px;
+}
+
+.controlsBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+
+  border: 0;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+}
