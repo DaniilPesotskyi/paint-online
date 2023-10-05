@@ -9,6 +9,10 @@ class ToolState {
   setTool(tool) {
     this.tool = tool;
   }
+
+  getTool() {
+    return this.tool;
+  }
 }
 
 export default new ToolState();

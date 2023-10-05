@@ -18,5 +18,9 @@
 <symbol id="rectangle" viewBox="0 0 32 32">
 <path d="M27 5.5h-22.001c-0.829 0-1.5 0.672-1.5 1.5v0 17.998c0 0.829 0.672 1.5 1.5 1.5v0h22.001c0.828 0 1.5-0.672 1.5-1.5v0-17.997c0-0.829-0.672-1.5-1.5-1.5v0zM27.5 25c-0.001 0.275-0.224 0.498-0.499 0.499h-22.001c-0.276 0-0.499-0.224-0.499-0.499v0-17.998c0-0.276 0.223-0.499 0.499-0.499v0h22.001c0.276 0 0.499 0.223 0.499 0.499v0 17.997z"></path>
 </symbol>
+<symbol id="reset" viewBox="0 0 32 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.28" d="M22.095 5.334c3.679 2.098 6.095 6.129 6.095 10.666 0 6.733-5.458 12.191-12.191 12.191s-12.191-5.458-12.191-12.191c0-6.733 5.458-12.191 12.191-12.191v0"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.28" d="M22.095 11.429v-6.095h6.095"></path>
+</symbol>
 </defs>
 </svg>

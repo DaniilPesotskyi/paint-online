@@ -93,3 +93,8 @@
   width: 25px;
   height: 25px;
 }
+
+.iconReset {
+  stroke: black;
+  fill: none;
+}
