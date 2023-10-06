@@ -1,6 +1,6 @@
 import Tool from "./Tool";
 
-export default class Rectangle extends Tool {
+export default class RectangleFilled extends Tool {
   constructor(canvas) {
     super(canvas);
     this.listen();
@@ -45,6 +45,7 @@ export default class Rectangle extends Tool {
       this.ctx.beginPath();
       this.ctx.strokeStyle = "black";
       this.ctx.rect(x, y, w, h);
+      this.ctx.fill();
       this.ctx.stroke();
     };
   }

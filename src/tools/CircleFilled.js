@@ -1,6 +1,6 @@
 import Tool from "./Tool";
 
-export default class Rectangle extends Tool {
+export default class CircleFilled extends Tool {
   constructor(canvas) {
     super(canvas);
     this.listen();
@@ -44,7 +44,16 @@ export default class Rectangle extends Tool {
       this.ctx.drawImage(img, 0, 0, this.canvas.width, this.canvas.height);
       this.ctx.beginPath();
       this.ctx.strokeStyle = "black";
-      this.ctx.rect(x, y, w, h);
+      this.ctx.ellipse(
+        x + w / 2,
+        y + h / 2,
+        Math.abs(w / 2),
+        Math.abs(h / 2),
+        0,
+        0,
+        2 * Math.PI
+      );
+      this.ctx.fill();
       this.ctx.stroke();
     };
   }

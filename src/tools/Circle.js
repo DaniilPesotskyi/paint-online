@@ -53,7 +53,6 @@ export default class Circle extends Tool {
         0,
         2 * Math.PI
       );
-      this.ctx.fill();
       this.ctx.stroke();
     };
   }

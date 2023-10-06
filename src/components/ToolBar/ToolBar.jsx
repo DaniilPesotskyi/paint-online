@@ -9,9 +9,11 @@ import Icon from "../Icon";
 
 import Brush from "../../tools/Brush";
 import Eraser from "../../tools/Eraser";
-import Rectangle from "../../tools/Rectangle";
-import Circle from "../../tools/Circle";
+import RectangleFilled from "../../tools/RectangleFilled";
+import CircleFilled from "../../tools/CircleFilled";
 import Line from "../../tools/Line";
+import Circle from "../../tools/Circle";
+import Rectangle from "../../tools/Rectangle";
 
 import { observer } from "mobx-react-lite";
 
@@ -45,6 +47,40 @@ const ToolBar = observer(() => {
           <li type="button" className={css.toolItem}>
             <button
               className={cn(css.toolBtn, {
+                [css.active]: toolState.getTool() instanceof RectangleFilled,
+              })}
+              onClick={() =>
+                toolState.setTool(new RectangleFilled(canvasState.canvas))
+              }
+            >
+              <Icon id={"rectangle-filled"} className={css.icon} />
+            </button>
+          </li>
+          <li type="button" className={css.toolItem}>
+            <button
+              className={cn(css.toolBtn, {
+                [css.active]: toolState.getTool() instanceof CircleFilled,
+              })}
+              onClick={() =>
+                toolState.setTool(new CircleFilled(canvasState.canvas))
+              }
+            >
+              <Icon id={"circle-filled"} className={css.icon} />
+            </button>
+          </li>
+          <li type="button" className={css.toolItem}>
+            <button
+              className={cn(css.toolBtn, {
+                [css.active]: toolState.getTool() instanceof Line,
+              })}
+              onClick={() => toolState.setTool(new Line(canvasState.canvas))}
+            >
+              <Icon id={"line"} className={css.icon} />
+            </button>
+          </li>
+          <li type="button" className={css.toolItem}>
+            <button
+              className={cn(css.toolBtn, {
                 [css.active]: toolState.getTool() instanceof Rectangle,
               })}
               onClick={() =>
@@ -62,16 +98,6 @@ const ToolBar = observer(() => {
               onClick={() => toolState.setTool(new Circle(canvasState.canvas))}
             >
               <Icon id={"circle"} className={css.icon} />
-            </button>
-          </li>
-          <li type="button" className={css.toolItem}>
-            <button
-              className={cn(css.toolBtn, {
-                [css.active]: toolState.getTool() instanceof Line,
-              })}
-              onClick={() => toolState.setTool(new Line(canvasState.canvas))}
-            >
-              <Icon id={"line"} className={css.icon} />
             </button>
           </li>
         </ul>
