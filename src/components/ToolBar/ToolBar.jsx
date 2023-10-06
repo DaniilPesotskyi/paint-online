@@ -6,10 +6,14 @@ import toolState from "../../store/toolState";
 import canvasState from "../../store/canvasState";
 
 import Icon from "../Icon";
+
 import Brush from "../../tools/Brush";
 import Eraser from "../../tools/Eraser";
-import { observer } from "mobx-react-lite";
 import Rectangle from "../../tools/Rectangle";
+import Circle from "../../tools/Circle";
+import Line from "../../tools/Line";
+
+import { observer } from "mobx-react-lite";
 
 const ToolBar = observer(() => {
   return (
@@ -51,12 +55,22 @@ const ToolBar = observer(() => {
             </button>
           </li>
           <li type="button" className={css.toolItem}>
-            <button className={css.toolBtn}>
+            <button
+              className={cn(css.toolBtn, {
+                [css.active]: toolState.getTool() instanceof Circle,
+              })}
+              onClick={() => toolState.setTool(new Circle(canvasState.canvas))}
+            >
               <Icon id={"circle"} className={css.icon} />
             </button>
           </li>
           <li type="button" className={css.toolItem}>
-            <button className={css.toolBtn}>
+            <button
+              className={cn(css.toolBtn, {
+                [css.active]: toolState.getTool() instanceof Line,
+              })}
+              onClick={() => toolState.setTool(new Line(canvasState.canvas))}
+            >
               <Icon id={"line"} className={css.icon} />
             </button>
           </li>

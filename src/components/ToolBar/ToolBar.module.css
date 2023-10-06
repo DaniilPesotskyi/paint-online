@@ -95,6 +95,9 @@
 }
 
 .iconReset {
+  width: 25px;
+  height: 25px;
+
   stroke: black;
   fill: none;
 }
