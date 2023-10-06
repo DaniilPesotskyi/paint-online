@@ -77,17 +77,29 @@ const ToolBar = observer(() => {
         </ul>
         <ul className={css.controlsList}>
           <li className={css.controlsItem}>
-            <button type="button" className={css.controlsBtn}>
+            <button
+              type="button"
+              className={css.controlsBtn}
+              onClick={() => canvasState.undo()}
+            >
               <Icon id={"arrow"} className={css.icon} />
             </button>
           </li>
           <li className={css.controlsItem}>
-            <button type="button" className={css.controlsBtn}>
+            <button
+              type="button"
+              className={css.controlsBtn}
+              onClick={() => canvasState.redo()}
+            >
               <Icon id={"arrow"} className={css.icon} />
             </button>
           </li>
           <li className={css.controlsItem}>
-            <button type="button" className={css.controlsBtn}>
+            <button
+              type="button"
+              className={css.controlsBtn}
+              onClick={() => canvasState.reset()}
+            >
               <Icon id={"reset"} className={css.iconReset} />
             </button>
           </li>
