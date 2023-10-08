@@ -95,7 +95,7 @@ const SettingBar = observer(() => {
                 id="width"
                 type="range"
                 className={css.inputRange}
-                min={1}
+                min={0}
                 max={20}
                 defaultValue={1}
                 onChange={(e) => toolState.setStrokeWidth(e.target.value)}
@@ -135,7 +135,7 @@ const SettingBar = observer(() => {
                 id="width"
                 type="range"
                 className={css.inputRange}
-                min={1}
+                min={0}
                 max={20}
                 defaultValue={1}
                 onChange={(e) => toolState.setStrokeWidth(e.target.value)}
