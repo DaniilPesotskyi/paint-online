@@ -1,3 +1,5 @@
+import css from "./App.module.css";
+
 import Canvas from "./components/Canvas/Canvas";
 import SettingBar from "./components/SettingBar/SettingBar";
 import ToolBar from "./components/ToolBar/ToolBar";
@@ -7,9 +9,18 @@ function App() {
   return (
     <>
       <TopBar />
-      <ToolBar />
-      <SettingBar />
-      <Canvas />
+      <div className={css.app}>
+        <ToolBar />
+        <SettingBar />
+        <Canvas />
+      </div>
+      <div className={css.unavailable}>
+        <h1 className={css.title}>Oops...</h1>
+        <p className={css.error}>
+          Unfortunately this application is not available for phones and tablets
+        </p>
+        <p className={css.solution}>To try it out, use a suitable device.</p>
+      </div>
     </>
   );
 }
