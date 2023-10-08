@@ -11,8 +11,11 @@ class CanvasState {
 
   setCanvas(canvas) {
     this.canvas = canvas;
+    const ctx = this.canvas.getContext("2d");
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
   }
-  
+
   getUndoList() {
     return this.undoList;
   }
