@@ -38,7 +38,6 @@ export default class Line extends Tool {
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
       this.ctx.drawImage(img, 0, 0, this.canvas.width, this.canvas.height);
       this.ctx.beginPath();
-      this.ctx.strokeStyle = "black";
       this.ctx.moveTo(this.currentX, this.currentY);
       this.ctx.lineTo(x, y);
       this.ctx.stroke();

@@ -33,7 +33,6 @@ export default class Brush extends Tool {
   }
 
   draw(x, y) {
-    this.ctx.strokeStyle = "black";
     this.ctx.lineTo(x, y);
     this.ctx.stroke();
   }

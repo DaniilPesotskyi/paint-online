@@ -105,7 +105,9 @@ const ToolBar = observer(() => {
           <li className={css.controlsItem}>
             <button
               type="button"
-              className={css.controlsBtn}
+              className={cn(css.controlsBtn, {
+                [css.disabled]: canvasState.getUndoList().length === 0,
+              })}
               onClick={() => canvasState.undo()}
             >
               <Icon id={"arrow"} className={css.icon} />
@@ -114,7 +116,9 @@ const ToolBar = observer(() => {
           <li className={css.controlsItem}>
             <button
               type="button"
-              className={css.controlsBtn}
+              className={cn(css.controlsBtn, {
+                [css.disabled]: canvasState.getRedoList().length === 0,
+              })}
               onClick={() => canvasState.redo()}
             >
               <Icon id={"arrow"} className={css.icon} />

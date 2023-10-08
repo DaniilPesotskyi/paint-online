@@ -10,6 +10,18 @@ class ToolState {
     this.tool = tool;
   }
 
+  setFillColor(color) {
+    this.tool.fillColor = color;
+  }
+
+  setStrokeColor(color) {
+    this.tool.strokeColor = color;
+  }
+
+  setStrokeWidth(width) {
+    this.tool.strokeWidth = width;
+  }
+
   getTool() {
     return this.tool;
   }

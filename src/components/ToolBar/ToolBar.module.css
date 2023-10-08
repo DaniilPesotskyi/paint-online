@@ -100,4 +100,14 @@
 
   stroke: black;
   fill: none;
+
+  transition: all 150ms;
+}
+
+.iconReset:hover {
+  stroke: rgb(88, 0, 0);
+}
+
+.disabled {
+  opacity: 0.2;
 }

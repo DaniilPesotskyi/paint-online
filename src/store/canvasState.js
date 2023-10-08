@@ -13,6 +13,14 @@ class CanvasState {
     this.canvas = canvas;
   }
 
+  getUndoList() {
+    return this.undoList;
+  }
+
+  getRedoList() {
+    return this.redoList;
+  }
+
   pushToUndo(data) {
     this.undoList.push(data);
   }
@@ -32,8 +40,6 @@ class CanvasState {
         ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         ctx.drawImage(img, 0, 0, this.canvas.width, this.canvas.height);
       };
-    } else {
-      ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
   }
 
@@ -48,14 +54,14 @@ class CanvasState {
         ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         ctx.drawImage(img, 0, 0, this.canvas.width, this.canvas.height);
       };
-    } else {
-      ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
   }
 
   reset() {
     let ctx = this.canvas.getContext("2d");
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    this.redoList = [];
+    this.undoList = [];
   }
 }
 
