@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/paint-online/static/css/main.eaf6bcd7.css",
+    "main.js": "/paint-online/static/js/main.dade9b3e.js",
+    "static/media/tools.svg": "/paint-online/static/media/tools.33247b03eddcedf81b1fb359081db20f.svg",
+    "static/media/github.svg": "/paint-online/static/media/github.89153e4a9bd25c5159ecb9070859cc8e.svg",
+    "index.html": "/paint-online/index.html",
+    "main.eaf6bcd7.css.map": "/paint-online/static/css/main.eaf6bcd7.css.map",
+    "main.dade9b3e.js.map": "/paint-online/static/js/main.dade9b3e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eaf6bcd7.css",
+    "static/js/main.dade9b3e.js"
+  ]
+}
