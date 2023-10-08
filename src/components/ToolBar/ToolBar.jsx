@@ -18,6 +18,16 @@ import Rectangle from "../../tools/Rectangle";
 import { observer } from "mobx-react-lite";
 
 const ToolBar = observer(() => {
+  const onHandleDownload = () => {
+    const imageData = canvasState.canvas.toDataURL("image/png");
+    const link = document.createElement("a");
+    link.href = imageData;
+    link.download = "image.jpg";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className={css.wrap}>
       <div className={css.container}>
@@ -134,6 +144,13 @@ const ToolBar = observer(() => {
             </button>
           </li>
         </ul>
+        <button
+          type="button"
+          className={css.downloadBtn}
+          onClick={onHandleDownload}
+        >
+          <Icon id={"download"} />
+        </button>
       </div>
     </div>
   );

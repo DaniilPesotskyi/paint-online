@@ -12,7 +12,7 @@ class CanvasState {
   setCanvas(canvas) {
     this.canvas = canvas;
   }
-
+  
   getUndoList() {
     return this.undoList;
   }

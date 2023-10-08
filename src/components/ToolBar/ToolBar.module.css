@@ -6,7 +6,6 @@
 .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
   max-width: var(--laptop-width);
   padding: 10px 10px;
@@ -42,7 +41,7 @@
   background-color: var(--tool-bg-clr);
   border-radius: var(--main-border-radius);
 
-  transition: background-color 150ms;
+  transition: all 150ms;
 
   cursor: pointer;
 }
@@ -52,12 +51,16 @@
 }
 
 .toolBtn.active {
+  scale: 1.1;
   background-color: var(--tool-active-bg-clr);
 }
 
 .controlsList {
   display: flex;
   align-items: center;
+
+  margin-left: auto;
+  margin-right: 25px;
 }
 
 .controlsItem {
@@ -110,4 +113,18 @@
 
 .disabled {
   opacity: 0.2;
+}
+
+.downloadBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+
+  border: 0;
+  background-color: transparent;
+
+  cursor: pointer;
 }
